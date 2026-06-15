@@ -20,9 +20,9 @@ export const metadata: Metadata = {
 
 const allPosts = [
   {
-    slug: 'i-lost-her-then-i-lost-myself',
+    slug: 'the-day-i-found-a-tracker-in-my-car',
     category: 'Real Life',
-    title: "I Lost Her. Then I Lost Myself. I'm Still Looking.",
+    title: 'The Day I Found a Tracker in My Car',
     excerpt: "I thought I was being paranoid. I wasn't. Here's what happened, what I did, and what every woman needs to know about coercive control.",
     date: '2024-01-15',
     readTime: '8 min',
