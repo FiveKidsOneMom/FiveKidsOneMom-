@@ -27,7 +27,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-brand-black pt-16 sm:pt-20 pb-8" role="contentinfo">
+    <footer className="bg-brand-green-dark pt-16 sm:pt-20 pb-8" role="contentinfo">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top section */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-16">
@@ -38,7 +38,7 @@ export default function Footer() {
                 <span className="font-display font-black text-brand-cream text-3xl leading-none block">
                   Five Kids
                 </span>
-                <span className="font-mono-brand text-brand-fire text-sm tracking-widest uppercase">
+                <span className="font-mono-brand text-brand-green-mid text-sm tracking-widest uppercase">
                   One Mom
                 </span>
               </div>
@@ -49,7 +49,7 @@ export default function Footer() {
             </p>
 
             {/* Affiliate disclaimer */}
-            <div className="p-4 border border-brand-charcoal">
+            <div className="p-4 border border-brand-green-dark">
               <p className="font-mono-brand text-brand-tan/50 text-xs leading-relaxed">
                 This site may contain affiliate links. If you buy through them, 
                 I may earn a small commission at no extra cost to you. I only 
@@ -62,7 +62,7 @@ export default function Footer() {
           <div className="lg:col-span-3 grid grid-cols-3 gap-8">
             {Object.entries(footerLinks).map(([section, links]) => (
               <div key={section}>
-                <h3 className="font-mono-brand text-brand-fire text-xs tracking-[0.2em] uppercase mb-4">
+                <h3 className="font-mono-brand text-brand-green-mid text-xs tracking-[0.2em] uppercase mb-4">
                   {section}
                 </h3>
                 <ul className="space-y-3">
@@ -73,7 +73,7 @@ export default function Footer() {
                         {...('external' in link && link.external
                           ? { target: '_blank', rel: 'noopener noreferrer' }
                           : {})}
-                        className="font-body text-brand-tan text-sm hover:text-brand-cream transition-colors duration-200 focus-visible:outline-brand-fire focus-visible:outline-1"
+                        className="font-body text-brand-tan text-sm hover:text-brand-cream transition-colors duration-200 focus-visible:outline-brand-green-mid focus-visible:outline-1"
                       >
                         {link.label}
                         {'external' in link && link.external && (
@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-brand-charcoal flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-brand-green-dark flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-mono-brand text-brand-tan/50 text-xs text-center sm:text-left">
             © {currentYear} Five Kids One Mom. All rights reserved.
           </p>

@@ -42,7 +42,7 @@ export default function Nav() {
         aria-label="Main navigation"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-brand-black/95 backdrop-blur-sm shadow-lg'
+            ? 'bg-brand-green-dark/95 backdrop-blur-sm shadow-lg'
             : 'bg-transparent'
         }`}
       >
@@ -54,10 +54,10 @@ export default function Nav() {
               className="group flex flex-col leading-none"
               aria-label="Five Kids One Mom - Home"
             >
-              <span className="font-display font-bold text-brand-cream text-xl sm:text-2xl tracking-tight group-hover:text-brand-fire transition-colors duration-200">
+              <span className="font-display font-bold text-brand-cream text-xl sm:text-2xl tracking-tight group-hover:text-brand-green-mid transition-colors duration-200">
                 Five Kids
               </span>
-              <span className="font-mono-brand text-brand-fire text-xs sm:text-sm tracking-widest uppercase">
+              <span className="font-mono-brand text-brand-green-mid text-xs sm:text-sm tracking-widest uppercase">
                 One Mom
               </span>
             </Link>
@@ -70,7 +70,7 @@ export default function Nav() {
                   href={link.href}
                   className={`font-body text-sm font-medium tracking-wide transition-colors duration-200 ${
                     link.label === 'Join the Club'
-                      ? 'bg-brand-fire text-brand-cream px-4 py-2 hover:bg-brand-cream hover:text-brand-fire transition-all duration-200'
+                      ? 'bg-brand-green-mid text-brand-cream px-4 py-2 hover:bg-brand-cream hover:text-brand-green-mid transition-all duration-200'
                       : 'text-brand-tan hover:text-brand-cream'
                   }`}
                 >
@@ -85,7 +85,7 @@ export default function Nav() {
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-              className="md:hidden flex flex-col gap-1.5 p-2 -mr-2 focus-visible:outline-brand-fire"
+              className="md:hidden flex flex-col gap-1.5 p-2 -mr-2 focus-visible:outline-brand-green-mid"
             >
               <span
                 className={`block w-6 h-0.5 bg-brand-cream transition-all duration-300 ${
@@ -119,14 +119,14 @@ export default function Nav() {
       >
         {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-brand-black/90 backdrop-blur-sm"
+          className="absolute inset-0 bg-brand-green-dark/90 backdrop-blur-sm"
           onClick={() => setMenuOpen(false)}
           aria-hidden="true"
         />
 
         {/* Menu panel */}
         <div
-          className={`absolute top-0 right-0 h-full w-72 bg-brand-black flex flex-col pt-20 px-8 transition-transform duration-300 ${
+          className={`absolute top-0 right-0 h-full w-72 bg-brand-green-dark flex flex-col pt-20 px-8 transition-transform duration-300 ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -138,8 +138,8 @@ export default function Nav() {
                 onClick={() => setMenuOpen(false)}
                 className={`font-display text-2xl font-bold transition-colors duration-200 ${
                   link.label === 'Join the Club'
-                    ? 'text-brand-fire'
-                    : 'text-brand-cream hover:text-brand-fire'
+                    ? 'text-brand-green-mid'
+                    : 'text-brand-cream hover:text-brand-green-mid'
                 }`}
               >
                 {link.label}

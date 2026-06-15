@@ -34,17 +34,17 @@ function FlipCard({ flip }: { flip: FlipItem }) {
       aria-label={`${flip.item}: bought for £${flip.bought}, sold for £${flip.sold}`}
     >
       {/* Category bar */}
-      <div className="bg-brand-black px-4 py-2 flex items-center justify-between">
+      <div className="bg-brand-green-dark px-4 py-2 flex items-center justify-between">
         <span className="font-mono-brand text-brand-tan text-xs tracking-wider uppercase">
           {flip.category}
         </span>
-        <span className="font-mono-brand text-brand-fire text-xs">
+        <span className="font-mono-brand text-brand-green-mid text-xs">
           via {flip.platform}
         </span>
       </div>
 
       <div className="p-5">
-        <h3 className="font-display font-bold text-brand-black text-base leading-snug mb-4">
+        <h3 className="font-display font-bold text-brand-green-dark text-base leading-snug mb-4">
           {flip.item}
         </h3>
 
@@ -52,10 +52,10 @@ function FlipCard({ flip }: { flip: FlipItem }) {
         <div className="flex items-center gap-3 mb-4">
           {/* Bought */}
           <div className="flex-1 text-center bg-brand-tan-light p-3">
-            <div className="font-mono-brand text-brand-charcoal text-xs tracking-wider uppercase mb-1">
+            <div className="font-mono-brand text-brand-green-dark text-xs tracking-wider uppercase mb-1">
               Paid
             </div>
-            <div className="font-display font-black text-brand-charcoal text-2xl">
+            <div className="font-display font-black text-brand-green-dark text-2xl">
               £{flip.bought}
             </div>
           </div>
@@ -63,17 +63,17 @@ function FlipCard({ flip }: { flip: FlipItem }) {
           {/* Arrow */}
           <div aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M4 10h12M12 6l4 4-4 4" stroke="#E8440A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M4 10h12M12 6l4 4-4 4" stroke="#2D5A2D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
 
           {/* Sold — tap to reveal */}
           <button
             onClick={() => setRevealed(true)}
-            className={`flex-1 text-center p-3 transition-all duration-500 focus-visible:outline-2 focus-visible:outline-brand-fire ${
+            className={`flex-1 text-center p-3 transition-all duration-500 focus-visible:outline-2 focus-visible:outline-brand-green-mid ${
               revealed
-                ? 'bg-brand-fire'
-                : 'bg-brand-black cursor-pointer hover:bg-brand-charcoal'
+                ? 'bg-brand-green-mid'
+                : 'bg-brand-green-dark cursor-pointer hover:bg-brand-green-dark'
             }`}
             aria-label={revealed ? `Sold for £${flip.sold}` : 'Tap to reveal sale price'}
           >
@@ -95,14 +95,14 @@ function FlipCard({ flip }: { flip: FlipItem }) {
         {/* Profit line */}
         {revealed && (
           <div className="flex items-center justify-between pt-3 border-t border-brand-tan-light">
-            <span className="font-mono-brand text-brand-charcoal/70 text-xs tracking-wider uppercase">
+            <span className="font-mono-brand text-brand-green-dark/70 text-xs tracking-wider uppercase">
               Profit
             </span>
             <div className="flex items-center gap-3">
-              <span className="font-display font-black text-brand-fire text-xl">
+              <span className="font-display font-black text-brand-green-mid text-xl">
                 +£{profit}
               </span>
-              <span className="font-mono-brand text-brand-charcoal/60 text-xs bg-brand-tan-light px-2 py-1">
+              <span className="font-mono-brand text-brand-green-dark/60 text-xs bg-brand-tan-light px-2 py-1">
                 {multiplier}×
               </span>
             </div>
@@ -151,13 +151,13 @@ export default function ResellingSection() {
     <section
       ref={sectionRef}
       id="reselling"
-      className="bg-brand-black py-20 sm:py-28 relative overflow-hidden"
+      className="bg-brand-green-dark py-20 sm:py-28 relative overflow-hidden"
       aria-label="Reselling flips"
     >
       {/* Background fire glow */}
       <div
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-96 opacity-5 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse at bottom, #E8440A, transparent 70%)' }}
+        style={{ background: 'radial-gradient(ellipse at bottom, #2D5A2D, transparent 70%)' }}
         aria-hidden="true"
       />
 
@@ -165,7 +165,7 @@ export default function ResellingSection() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8 sm:mb-12">
           <div>
-            <span className="scroll-reveal block font-mono-brand text-brand-fire text-xs tracking-[0.2em] uppercase mb-3">
+            <span className="scroll-reveal block font-mono-brand text-brand-green-mid text-xs tracking-[0.2em] uppercase mb-3">
               The flip diary
             </span>
             <h2
@@ -173,19 +173,19 @@ export default function ResellingSection() {
               style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
             >
               Real flips.{' '}
-              <span className="text-brand-fire italic">Real numbers.</span>
+              <span className="text-brand-green-mid italic">Real numbers.</span>
             </h2>
           </div>
           <Link
             href="/reselling"
-            className="scroll-reveal font-body text-sm font-semibold text-brand-fire hover:text-brand-cream underline underline-offset-4 transition-colors duration-200 self-start sm:self-auto"
+            className="scroll-reveal font-body text-sm font-semibold text-brand-green-mid hover:text-brand-cream underline underline-offset-4 transition-colors duration-200 self-start sm:self-auto"
           >
             All flips →
           </Link>
         </div>
 
         {/* Summary bar */}
-        <div className="scroll-reveal grid grid-cols-3 gap-4 mb-10 p-5 sm:p-8 bg-brand-charcoal">
+        <div className="scroll-reveal grid grid-cols-3 gap-4 mb-10 p-5 sm:p-8 bg-brand-green-dark">
           {[
             { label: 'Total spent', value: `£${totalBought}`, sub: 'on these 6 items' },
             { label: 'Total earned', value: `£${totalSold}`, sub: 'from selling' },
@@ -195,7 +195,7 @@ export default function ResellingSection() {
               <div className="font-mono-brand text-brand-tan/70 text-xs tracking-wider uppercase mb-1">
                 {stat.label}
               </div>
-              <div className={`font-display font-black text-xl sm:text-3xl leading-none mb-1 ${stat.highlight ? 'text-brand-fire' : 'text-brand-cream'}`}>
+              <div className={`font-display font-black text-xl sm:text-3xl leading-none mb-1 ${stat.highlight ? 'text-brand-green-mid' : 'text-brand-cream'}`}>
                 {stat.value}
               </div>
               <div className="font-mono-brand text-brand-tan/50 text-xs hidden sm:block">
@@ -222,7 +222,7 @@ export default function ResellingSection() {
           </p>
           <Link
             href="/reselling"
-            className="inline-flex items-center gap-2 bg-brand-fire text-brand-cream font-body font-semibold text-sm px-8 py-4 hover:bg-brand-cream hover:text-brand-fire transition-all duration-200 focus-visible:outline-2 focus-visible:outline-brand-cream"
+            className="inline-flex items-center gap-2 bg-brand-green-mid text-brand-cream font-body font-semibold text-sm px-8 py-4 hover:bg-brand-cream hover:text-brand-green-mid transition-all duration-200 focus-visible:outline-2 focus-visible:outline-brand-cream"
           >
             The Full Reselling Guide
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">

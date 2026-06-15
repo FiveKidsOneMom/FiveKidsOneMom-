@@ -26,7 +26,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-screen bg-brand-black overflow-hidden flex flex-col justify-center torn-edge-bottom"
+      className="relative min-h-screen bg-brand-green-dark overflow-hidden flex flex-col justify-center torn-edge-bottom"
       aria-label="Welcome to Five Kids One Mom"
     >
       {/* Texture overlay — subtle grain */}
@@ -44,7 +44,7 @@ export default function Hero() {
       <div
         className="absolute top-0 right-0 w-64 h-64 sm:w-96 sm:h-96 opacity-10 pointer-events-none"
         style={{
-          background: 'radial-gradient(circle at top right, #E8440A, transparent 70%)',
+          background: 'radial-gradient(circle at top right, #2D5A2D, transparent 70%)',
         }}
         aria-hidden="true"
       />
@@ -52,7 +52,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-32 sm:pt-36 sm:pb-40">
         {/* Eyebrow */}
         <div className="mb-6 sm:mb-8">
-          <span className="font-mono-brand text-brand-fire text-xs sm:text-sm tracking-[0.2em] uppercase">
+          <span className="font-mono-brand text-brand-green-mid text-xs sm:text-sm tracking-[0.2em] uppercase">
             The blog that tells it how it is
           </span>
         </div>
@@ -64,7 +64,7 @@ export default function Hero() {
           style={{ fontSize: 'clamp(3.5rem, 12vw, 9rem)' }}
         >
           Five Kids.<br />
-          <span className="text-brand-fire">One Mom.</span><br />
+          <span className="text-brand-green-mid">One Mom.</span><br />
           Zero <span className="italic">Filter.</span>
         </h1>
 
@@ -83,7 +83,7 @@ export default function Hero() {
         <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 mb-16 sm:mb-20">
           <Link
             href="/blog"
-            className="inline-flex items-center justify-center gap-2 bg-brand-fire text-brand-cream font-body font-semibold text-sm sm:text-base px-8 py-4 hover:bg-brand-cream hover:text-brand-fire transition-all duration-200 tracking-wide focus-visible:outline-2 focus-visible:outline-brand-cream"
+            className="inline-flex items-center justify-center gap-2 bg-brand-green-mid text-brand-cream font-body font-semibold text-sm sm:text-base px-8 py-4 hover:bg-brand-cream hover:text-brand-green-mid transition-all duration-200 tracking-wide focus-visible:outline-2 focus-visible:outline-brand-cream"
           >
             Read the Blog
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -101,7 +101,7 @@ export default function Hero() {
         {/* Stats bar */}
         <div
           ref={statsRef}
-          className="grid grid-cols-3 gap-4 sm:gap-8 pt-8 border-t border-brand-charcoal"
+          className="grid grid-cols-3 gap-4 sm:gap-8 pt-8 border-t border-brand-green-dark"
           aria-label="Key stats"
         >
           {[
@@ -129,7 +129,7 @@ export default function Hero() {
         <span className="font-mono-brand text-brand-tan text-xs tracking-widest uppercase">Scroll</span>
         <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
           <rect x="1" y="1" width="14" height="22" rx="7" stroke="#C9B99A" strokeWidth="1.5"/>
-          <circle cx="8" cy="8" r="2.5" fill="#E8440A"/>
+          <circle cx="8" cy="8" r="2.5" fill="#2D5A2D"/>
         </svg>
       </div>
     </section>

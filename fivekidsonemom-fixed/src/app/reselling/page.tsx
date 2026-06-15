@@ -76,14 +76,14 @@ export default function ResellingPage() {
       <Nav />
       <main>
         {/* Hero */}
-        <section className="bg-brand-black pt-28 pb-16 sm:pt-36 sm:pb-20 relative overflow-hidden" aria-label="Reselling page header">
+        <section className="bg-brand-green-dark pt-28 pb-16 sm:pt-36 sm:pb-20 relative overflow-hidden" aria-label="Reselling page header">
           <div
             className="absolute top-0 right-0 w-96 h-96 opacity-5 pointer-events-none"
-            style={{ background: 'radial-gradient(circle at top right, #E8440A, transparent 70%)' }}
+            style={{ background: 'radial-gradient(circle at top right, #2D5A2D, transparent 70%)' }}
             aria-hidden="true"
           />
           <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="block font-mono-brand text-brand-fire text-xs tracking-[0.2em] uppercase mb-4">
+            <span className="block font-mono-brand text-brand-green-mid text-xs tracking-[0.2em] uppercase mb-4">
               The flip diary
             </span>
             <h1
@@ -91,7 +91,7 @@ export default function ResellingPage() {
               style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
             >
               £1 in.{' '}
-              <span className="text-brand-fire">£30 out.</span>
+              <span className="text-brand-green-mid">£30 out.</span>
             </h1>
             <p className="font-body text-brand-tan text-base sm:text-xl max-w-2xl leading-relaxed">
               I didn&apos;t start reselling with capital, a business plan, or a course. 
@@ -102,7 +102,7 @@ export default function ResellingPage() {
         </section>
 
         {/* Quick stats */}
-        <section className="bg-brand-fire py-8" aria-label="Reselling statistics">
+        <section className="bg-brand-green-mid py-8" aria-label="Reselling statistics">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-3 gap-4 text-center">
               {[
@@ -127,19 +127,19 @@ export default function ResellingPage() {
         <section className="bg-brand-cream py-16 sm:py-24" aria-label="Reselling platforms">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2
-              className="font-display font-black text-brand-black mb-3"
+              className="font-display font-black text-brand-green-dark mb-3"
               style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)' }}
             >
               Which platform should you use?
             </h2>
-            <p className="font-body text-brand-charcoal text-base mb-10 max-w-xl">
+            <p className="font-body text-brand-green-dark text-base mb-10 max-w-xl">
               I use all four. Here&apos;s my honest breakdown — no affiliate bias.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {platforms.map((platform) => (
                 <article
                   key={platform.name}
-                  className="bg-brand-black p-6 sm:p-8"
+                  className="bg-brand-green-dark p-6 sm:p-8"
                   aria-label={`${platform.name} platform review`}
                 >
                   <div className="flex items-center gap-3 mb-4">
@@ -148,7 +148,7 @@ export default function ResellingPage() {
                       <h3 className="font-display font-bold text-brand-cream text-xl">
                         {platform.name}
                       </h3>
-                      <div className="font-mono-brand text-brand-fire text-xs" aria-label={`Rating: ${platform.myRating}`}>
+                      <div className="font-mono-brand text-brand-green-mid text-xs" aria-label={`Rating: ${platform.myRating}`}>
                         {platform.myRating}
                       </div>
                     </div>
@@ -163,9 +163,9 @@ export default function ResellingPage() {
                       <span className="font-body text-brand-cream text-sm text-right">{platform.fees}</span>
                     </div>
                   </div>
-                  <div className="pt-4 border-t border-brand-charcoal">
+                  <div className="pt-4 border-t border-brand-green-dark">
                     <p className="font-body text-brand-tan text-sm leading-relaxed">
-                      <strong className="text-brand-fire">My tip: </strong>
+                      <strong className="text-brand-green-mid">My tip: </strong>
                       {platform.tip}
                     </p>
                   </div>
@@ -176,7 +176,7 @@ export default function ResellingPage() {
         </section>
 
         {/* Sourcing tips */}
-        <section className="bg-brand-black py-16 sm:py-24" aria-label="Sourcing tips">
+        <section className="bg-brand-green-dark py-16 sm:py-24" aria-label="Sourcing tips">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2
               className="font-display font-black text-brand-cream mb-3"
@@ -191,9 +191,9 @@ export default function ResellingPage() {
               {sourcingTips.map((tip, i) => (
                 <div
                   key={tip.title}
-                  className="flex gap-6 p-6 bg-brand-charcoal group hover:bg-brand-fire/10 transition-colors duration-200"
+                  className="flex gap-6 p-6 bg-brand-green-dark group hover:bg-brand-green-mid/10 transition-colors duration-200"
                 >
-                  <div className="font-mono-brand text-brand-fire text-xs shrink-0 mt-1">
+                  <div className="font-mono-brand text-brand-green-mid text-xs shrink-0 mt-1">
                     0{i + 1}
                   </div>
                   <div>

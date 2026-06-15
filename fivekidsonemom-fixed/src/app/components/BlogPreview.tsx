@@ -11,21 +11,22 @@ interface BlogPost {
   date: string
   readTime: string
   featured?: boolean
+  comingSoon?: boolean
 }
 
 const posts: BlogPost[] = [
   {
-    slug: 'the-day-i-found-a-tracker-in-my-car',
+    slug: 'i-lost-her-then-i-lost-myself',
     category: 'Real Life',
-    title: 'The Day I Found a Tracker in My Car',
+    title: "I Lost Her. Then I Lost Myself. I'm Still Looking.",
     excerpt:
-      'I thought I was being paranoid. I wasn\'t. Here\'s what happened, what I did, and what every woman needs to know about coercive control.',
+      'Her name was Alison. She was my best friend — my sister in every way that mattered. I was pregnant when they told us she had cancer. She battled for two years. I was there for every single moment of it.',
     date: '2024-01-15',
-    readTime: '8 min',
+    readTime: '10 min',
     featured: true,
   },
   {
-    slug: 'how-i-flipped-50-quid-into-300-in-one-weekend',
+    slug: '',
     category: 'Reselling',
     title: 'How I Flipped £50 into £300 in One Weekend',
     excerpt:
@@ -33,24 +34,27 @@ const posts: BlogPost[] = [
     date: '2024-01-08',
     readTime: '6 min',
     featured: true,
+    comingSoon: true,
   },
   {
-    slug: 'saying-no-when-youre-wired-to-say-yes',
+    slug: '',
     category: 'Mental Health',
-    title: 'Saying No When You\'re Wired to Say Yes',
+    title: "Saying No When You're Wired to Say Yes",
     excerpt:
-      'I\'ve spent my whole life being the reliable one. The helpful one. The one who never causes a problem. Here\'s what that actually costs you.',
+      "I've spent my whole life being the reliable one. The helpful one. The one who never causes a problem. Here's what that actually costs you.",
     date: '2023-12-20',
     readTime: '5 min',
+    comingSoon: true,
   },
   {
-    slug: 'premium-school-uniform-for-less-than-supermarket-price',
+    slug: '',
     category: 'Savings',
     title: 'Premium School Uniform for Less Than Supermarket Price',
     excerpt:
-      'Five kids means five lots of school uniforms. I\'ve cracked it. M&S, Next, and John Lewis quality for Primark prices — every time.',
+      "Five kids means five lots of school uniforms. I've cracked it. M&S quality for Primark prices — every time.",
     date: '2023-12-10',
     readTime: '4 min',
+    comingSoon: true,
   },
 ]
 
@@ -118,94 +122,85 @@ export default function BlogPreview() {
           <Link
             href="/blog"
             className="scroll-reveal font-body text-sm font-semibold text-brand-fire hover:text-brand-black underline underline-offset-4 transition-colors duration-200 self-start sm:self-auto"
-            aria-label="View all blog posts"
           >
             All posts →
           </Link>
         </div>
 
-        {/* Featured posts — large cards */}
+        {/* Featured posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {featured.map((post) => (
-            <article key={post.slug} className="scroll-reveal">
-              <Link
-                href={`/blog/${post.slug}`}
-                className="blog-card block bg-brand-black p-8 sm:p-10 h-full group focus-visible:outline-2 focus-visible:outline-brand-fire"
-                aria-label={`Read: ${post.title}`}
-              >
-                <div className="flex items-center justify-between mb-6">
-                  <span
-                    className={`font-mono-brand text-xs tracking-widest uppercase px-2 py-1 ${categoryColors[post.category] ?? 'bg-brand-tan text-brand-black'}`}
-                  >
-                    {post.category}
-                  </span>
-                  <span className="font-mono-brand text-brand-tan text-xs">
-                    {post.readTime} read
-                  </span>
+            <article key={post.title} className="scroll-reveal">
+              {post.comingSoon ? (
+                <div className="blog-card block bg-brand-black p-8 sm:p-10 h-full opacity-60 cursor-default">
+                  <div className="flex items-center justify-between mb-6">
+                    <span className={`font-mono-brand text-xs tracking-widest uppercase px-2 py-1 ${categoryColors[post.category] ?? 'bg-brand-tan text-brand-black'}`}>
+                      {post.category}
+                    </span>
+                    <span className="font-mono-brand text-brand-tan text-xs bg-brand-charcoal px-2 py-1">
+                      Coming Soon
+                    </span>
+                  </div>
+                  <h3 className="font-display font-bold text-brand-cream text-xl sm:text-2xl leading-tight mb-4">
+                    {post.title}
+                  </h3>
+                  <p className="font-body text-brand-tan text-sm sm:text-base leading-relaxed">
+                    {post.excerpt}
+                  </p>
                 </div>
-
-                <h3 className="font-display font-bold text-brand-cream text-xl sm:text-2xl leading-tight mb-4 group-hover:text-brand-fire transition-colors duration-200">
-                  {post.title}
-                </h3>
-
-                <p className="font-body text-brand-tan text-sm sm:text-base leading-relaxed mb-6">
-                  {post.excerpt}
-                </p>
-
-                <div className="flex items-center justify-between">
-                  <time
-                    dateTime={post.date}
-                    className="font-mono-brand text-brand-tan/60 text-xs"
-                  >
-                    {formatDate(post.date)}
-                  </time>
-                  <span
-                    className="font-body text-brand-fire text-sm font-semibold group-hover:translate-x-1 transition-transform duration-200"
-                    aria-hidden="true"
-                  >
-                    Read →
-                  </span>
-                </div>
-              </Link>
+              ) : (
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="blog-card block bg-brand-black p-8 sm:p-10 h-full group focus-visible:outline-2 focus-visible:outline-brand-fire"
+                >
+                  <div className="flex items-center justify-between mb-6">
+                    <span className={`font-mono-brand text-xs tracking-widest uppercase px-2 py-1 ${categoryColors[post.category] ?? 'bg-brand-tan text-brand-black'}`}>
+                      {post.category}
+                    </span>
+                    <span className="font-mono-brand text-brand-tan text-xs">
+                      {post.readTime} read
+                    </span>
+                  </div>
+                  <h3 className="font-display font-bold text-brand-cream text-xl sm:text-2xl leading-tight mb-4 group-hover:text-brand-fire transition-colors duration-200">
+                    {post.title}
+                  </h3>
+                  <p className="font-body text-brand-tan text-sm sm:text-base leading-relaxed mb-6">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <time dateTime={post.date} className="font-mono-brand text-brand-tan/60 text-xs">
+                      {formatDate(post.date)}
+                    </time>
+                    <span className="font-body text-brand-fire text-sm font-semibold group-hover:translate-x-1 transition-transform duration-200">
+                      Read →
+                    </span>
+                  </div>
+                </Link>
+              )}
             </article>
           ))}
         </div>
 
-        {/* Regular posts — smaller cards */}
+        {/* Regular posts */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {regular.map((post) => (
-            <article key={post.slug} className="scroll-reveal">
-              <Link
-                href={`/blog/${post.slug}`}
-                className="blog-card block border border-brand-tan-light p-6 h-full group focus-visible:outline-2 focus-visible:outline-brand-fire"
-                aria-label={`Read: ${post.title}`}
-              >
+            <article key={post.title} className="scroll-reveal">
+              <div className="blog-card border border-brand-tan-light p-6 h-full opacity-60 cursor-default">
                 <div className="flex items-center justify-between mb-4">
-                  <span
-                    className={`font-mono-brand text-xs tracking-widest uppercase px-2 py-1 ${categoryColors[post.category] ?? 'bg-brand-tan text-brand-black'}`}
-                  >
+                  <span className={`font-mono-brand text-xs tracking-widest uppercase px-2 py-1 ${categoryColors[post.category] ?? 'bg-brand-tan text-brand-black'}`}>
                     {post.category}
                   </span>
-                  <span className="font-mono-brand text-brand-charcoal/60 text-xs">
-                    {post.readTime} read
+                  <span className="font-mono-brand text-brand-charcoal/60 text-xs bg-brand-tan-light px-2 py-1">
+                    Coming Soon
                   </span>
                 </div>
-
-                <h3 className="font-display font-bold text-brand-black text-lg leading-tight mb-3 group-hover:text-brand-fire transition-colors duration-200">
+                <h3 className="font-display font-bold text-brand-black text-lg leading-tight mb-3">
                   {post.title}
                 </h3>
-
-                <p className="font-body text-brand-charcoal text-sm leading-relaxed mb-4">
+                <p className="font-body text-brand-charcoal text-sm leading-relaxed">
                   {post.excerpt}
                 </p>
-
-                <time
-                  dateTime={post.date}
-                  className="font-mono-brand text-brand-charcoal/50 text-xs"
-                >
-                  {formatDate(post.date)}
-                </time>
-              </Link>
+              </div>
             </article>
           ))}
         </div>

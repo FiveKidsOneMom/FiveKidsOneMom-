@@ -10,12 +10,18 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          black: '#0D0D0D',
+          black: '#1A2A1A',
           cream: '#F5F0E8',
-          fire: '#E8440A',
-          charcoal: '#2D2D2D',
+          fire: '#2D5A2D',
+          charcoal: '#2C3E2C',
           tan: '#C9B99A',
           'tan-light': '#E8DFCE',
+          green: {
+            dark: '#1A2A1A',
+            mid: '#2D5A2D',
+            light: '#4A7C4A',
+            pale: '#D4E6D4',
+          }
         },
       },
       fontFamily: {

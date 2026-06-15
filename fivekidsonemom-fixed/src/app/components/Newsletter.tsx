@@ -57,26 +57,26 @@ export default function Newsletter() {
       {/* Decorative element */}
       <div
         className="absolute top-0 left-0 w-48 h-48 opacity-5 pointer-events-none"
-        style={{ background: 'radial-gradient(circle at top left, #E8440A, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle at top left, #2D5A2D, transparent 70%)' }}
         aria-hidden="true"
       />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span className="scroll-reveal inline-block font-mono-brand text-brand-fire text-xs tracking-[0.2em] uppercase mb-4">
+        <span className="scroll-reveal inline-block font-mono-brand text-brand-green-mid text-xs tracking-[0.2em] uppercase mb-4">
           Join the club
         </span>
 
         <h2
-          className="scroll-reveal font-display font-black text-brand-black leading-tight mb-4"
+          className="scroll-reveal font-display font-black text-brand-green-dark leading-tight mb-4"
           style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}
         >
           No spam.{' '}
-          <span className="italic text-brand-fire">No fluff.</span>
+          <span className="italic text-brand-green-mid">No fluff.</span>
           <br />
           Just the real stuff.
         </h2>
 
-        <p className="scroll-reveal font-body text-brand-charcoal text-base sm:text-lg leading-relaxed mb-3 max-w-lg mx-auto">
+        <p className="scroll-reveal font-body text-brand-green-dark text-base sm:text-lg leading-relaxed mb-3 max-w-lg mx-auto">
           Get new blog posts, my latest flip finds, and honest money-saving tips
           delivered straight to your inbox. Mum to mum.
         </p>
@@ -87,7 +87,7 @@ export default function Newsletter() {
 
         {state === 'success' ? (
           <div
-            className="scroll-reveal bg-brand-black p-8 sm:p-12"
+            className="scroll-reveal bg-brand-green-dark p-8 sm:p-12"
             role="status"
             aria-live="polite"
           >
@@ -127,13 +127,13 @@ export default function Newsletter() {
                 disabled={state === 'loading'}
                 aria-describedby={state === 'error' ? 'newsletter-error' : undefined}
                 aria-invalid={state === 'error'}
-                className="w-full bg-brand-black text-brand-cream font-body text-base px-5 py-4 placeholder-brand-tan/40 focus:outline-none focus:ring-2 focus:ring-brand-fire border-0 disabled:opacity-50"
+                className="w-full bg-brand-green-dark text-brand-cream font-body text-base px-5 py-4 placeholder-brand-tan/40 focus:outline-none focus:ring-2 focus:ring-brand-green-mid border-0 disabled:opacity-50"
               />
             </div>
             <button
               type="submit"
               disabled={state === 'loading'}
-              className="bg-brand-fire text-brand-cream font-body font-semibold text-sm px-8 py-4 hover:bg-brand-black transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-brand-fire whitespace-nowrap"
+              className="bg-brand-green-mid text-brand-cream font-body font-semibold text-sm px-8 py-4 hover:bg-brand-green-dark transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-brand-green-mid whitespace-nowrap"
               aria-label={state === 'loading' ? 'Subscribing...' : 'Subscribe to newsletter'}
             >
               {state === 'loading' ? (
@@ -156,7 +156,7 @@ export default function Newsletter() {
             id="newsletter-error"
             role="alert"
             aria-live="assertive"
-            className="mt-3 font-body text-brand-fire text-sm"
+            className="mt-3 font-body text-brand-green-mid text-sm"
           >
             {errorMsg}
           </p>
@@ -171,7 +171,7 @@ export default function Newsletter() {
           ].map((item) => (
             <div key={item.label} className="text-center">
               <div className="text-2xl mb-2" aria-hidden="true">{item.emoji}</div>
-              <div className="font-mono-brand text-brand-charcoal text-xs tracking-wider uppercase">
+              <div className="font-mono-brand text-brand-green-dark text-xs tracking-wider uppercase">
                 {item.label}
               </div>
             </div>

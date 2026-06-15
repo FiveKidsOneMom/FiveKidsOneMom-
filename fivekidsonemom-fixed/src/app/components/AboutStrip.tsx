@@ -33,20 +33,20 @@ export default function AboutStrip() {
           {/* Left — text */}
           <div>
             <div className="scroll-reveal mb-4">
-              <span className="font-mono-brand text-brand-fire text-xs tracking-[0.2em] uppercase">
+              <span className="font-mono-brand text-brand-green-mid text-xs tracking-[0.2em] uppercase">
                 The woman behind it
               </span>
             </div>
 
-            <h2 className="scroll-reveal font-display font-black text-brand-black leading-[1.05] tracking-tight mb-6"
+            <h2 className="scroll-reveal font-display font-black text-brand-green-dark leading-[1.05] tracking-tight mb-6"
               style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)' }}
             >
               I didn&apos;t choose the{' '}
-              <span className="italic text-brand-fire">easy</span>{' '}
+              <span className="italic text-brand-green-mid">easy</span>{' '}
               story.
             </h2>
 
-            <div className="scroll-reveal space-y-4 font-body text-brand-charcoal text-base sm:text-lg leading-relaxed">
+            <div className="scroll-reveal space-y-4 font-body text-brand-green-dark text-base sm:text-lg leading-relaxed">
               <p>
                 I left home at 18, raised my five kids mostly alone, left a controlling relationship,
                 and still show up full-time at work every single day. No one handed me anything.
@@ -55,7 +55,7 @@ export default function AboutStrip() {
                 I started reselling to build something of my own. Buying at £1-3, flipping 
                 for £12-32. It works — and I&apos;m going to show you exactly how.
               </p>
-              <p className="font-semibold text-brand-black">
+              <p className="font-semibold text-brand-green-dark">
                 This blog is for every mum who&apos;s tired of pretending everything&apos;s fine.
               </p>
             </div>
@@ -87,7 +87,7 @@ export default function AboutStrip() {
             ].map((card) => (
               <div
                 key={card.title}
-                className="bg-brand-black p-6 group hover:bg-brand-charcoal transition-colors duration-200"
+                className="bg-brand-green-dark p-6 group hover:bg-brand-green-dark transition-colors duration-200"
               >
                 <div className="text-2xl mb-3" aria-hidden="true">{card.emoji}</div>
                 <h3 className="font-display font-bold text-brand-cream text-lg mb-2">

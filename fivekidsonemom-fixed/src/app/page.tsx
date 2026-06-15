@@ -14,7 +14,7 @@ export default function HomePage() {
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-brand-fire focus:text-brand-cream focus:px-4 focus:py-2 focus:font-body focus:text-sm"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-brand-green-mid focus:text-brand-cream focus:px-4 focus:py-2 focus:font-body focus:text-sm"
         >
           Skip to main content
         </a>

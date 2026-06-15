@@ -20,9 +20,9 @@ export const metadata: Metadata = {
 
 const allPosts = [
   {
-    slug: 'the-day-i-found-a-tracker-in-my-car',
+    slug: 'i-lost-her-then-i-lost-myself',
     category: 'Real Life',
-    title: 'The Day I Found a Tracker in My Car',
+    title: "I Lost Her. Then I Lost Myself. I'm Still Looking.",
     excerpt: "I thought I was being paranoid. I wasn't. Here's what happened, what I did, and what every woman needs to know about coercive control.",
     date: '2024-01-15',
     readTime: '8 min',
@@ -70,10 +70,10 @@ const allPosts = [
 ]
 
 const categoryColors: Record<string, string> = {
-  'Real Life': 'bg-brand-fire text-brand-cream',
-  'Reselling': 'bg-brand-black text-brand-cream',
-  'Mental Health': 'bg-brand-charcoal text-brand-tan',
-  'Savings': 'bg-brand-tan text-brand-black',
+  'Real Life': 'bg-brand-green-mid text-brand-cream',
+  'Reselling': 'bg-brand-green-dark text-brand-cream',
+  'Mental Health': 'bg-brand-green-dark text-brand-tan',
+  'Savings': 'bg-brand-tan text-brand-green-dark',
 }
 
 function formatDate(dateStr: string): string {
@@ -92,9 +92,9 @@ export default function BlogPage() {
       <Nav />
       <main>
         {/* Hero */}
-        <section className="bg-brand-black pt-28 pb-16 sm:pt-36 sm:pb-20" aria-label="Blog header">
+        <section className="bg-brand-green-dark pt-28 pb-16 sm:pt-36 sm:pb-20" aria-label="Blog header">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <span className="block font-mono-brand text-brand-fire text-xs tracking-[0.2em] uppercase mb-4">
+            <span className="block font-mono-brand text-brand-green-mid text-xs tracking-[0.2em] uppercase mb-4">
               The blog
             </span>
             <h1
@@ -118,7 +118,7 @@ export default function BlogPage() {
                 <span
                   key={cat}
                   role="listitem"
-                  className="font-mono-brand text-xs tracking-widest uppercase px-4 py-2 whitespace-nowrap cursor-pointer border border-brand-tan-light hover:border-brand-fire hover:text-brand-fire transition-colors duration-200 first:bg-brand-black first:text-brand-cream first:border-brand-black"
+                  className="font-mono-brand text-xs tracking-widest uppercase px-4 py-2 whitespace-nowrap cursor-pointer border border-brand-tan-light hover:border-brand-green-mid hover:text-brand-green-mid transition-colors duration-200 first:bg-brand-green-dark first:text-brand-cream first:border-brand-green-dark"
                 >
                   {cat}
                 </span>
@@ -135,28 +135,28 @@ export default function BlogPage() {
                 <article key={post.slug}>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="blog-card block h-full border border-brand-tan-light p-6 sm:p-8 group focus-visible:outline-2 focus-visible:outline-brand-fire"
+                    className="blog-card block h-full border border-brand-tan-light p-6 sm:p-8 group focus-visible:outline-2 focus-visible:outline-brand-green-mid"
                     aria-label={`Read: ${post.title}`}
                   >
                     <div className="flex items-center justify-between mb-4">
-                      <span className={`font-mono-brand text-xs tracking-widest uppercase px-2 py-1 ${categoryColors[post.category] ?? 'bg-brand-tan text-brand-black'}`}>
+                      <span className={`font-mono-brand text-xs tracking-widest uppercase px-2 py-1 ${categoryColors[post.category] ?? 'bg-brand-tan text-brand-green-dark'}`}>
                         {post.category}
                       </span>
-                      <span className="font-mono-brand text-brand-charcoal/60 text-xs">
+                      <span className="font-mono-brand text-brand-green-dark/60 text-xs">
                         {post.readTime} read
                       </span>
                     </div>
-                    <h2 className="font-display font-bold text-brand-black text-lg sm:text-xl leading-tight mb-3 group-hover:text-brand-fire transition-colors duration-200">
+                    <h2 className="font-display font-bold text-brand-green-dark text-lg sm:text-xl leading-tight mb-3 group-hover:text-brand-green-mid transition-colors duration-200">
                       {post.title}
                     </h2>
-                    <p className="font-body text-brand-charcoal text-sm leading-relaxed mb-6">
+                    <p className="font-body text-brand-green-dark text-sm leading-relaxed mb-6">
                       {post.excerpt}
                     </p>
                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-brand-tan-light">
-                      <time dateTime={post.date} className="font-mono-brand text-brand-charcoal/50 text-xs">
+                      <time dateTime={post.date} className="font-mono-brand text-brand-green-dark/50 text-xs">
                         {formatDate(post.date)}
                       </time>
-                      <span className="font-body text-brand-fire text-sm font-semibold group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true">
+                      <span className="font-body text-brand-green-mid text-sm font-semibold group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true">
                         Read →
                       </span>
                     </div>
