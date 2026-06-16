@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://fivekidsonemom.com/sitemap.xml
